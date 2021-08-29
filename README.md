@@ -1,3 +1,3 @@
 # qtr4_midi_piano
  
-hui pizdec a hyi pizdec
+driver 4toby rabotalo: https://tetherscript.com/controlmyjoystick-download/
