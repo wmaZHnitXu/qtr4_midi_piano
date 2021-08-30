@@ -33,7 +33,7 @@ namespace App
         private string filePath;
         private const int keyoffset = 0;
         private static TextBox logger;
-        private float speed;
+        private int speed;
         private static Thread mainThread;
         private Thread playerThread;
         public void SetText(String s) { tbLog.AppendText(s); }
@@ -41,37 +41,11 @@ namespace App
         public Form1()
         {
             InitializeComponent();
-            ExitOnPlayHelper h = new ExitOnPlayHelper();
-            Thread myThread = new Thread(new ThreadStart(h.Subscribe));
+            //ExitOnPlayHelper h = new ExitOnPlayHelper();
+            //Thread myThread = new Thread(new ThreadStart(h.Subscribe));
             logger = tbLog;
-            speed = 1;
+            speed = 100;
             mainThread = Thread.CurrentThread;
-            myThread.Start();
-
-        }
-
-        public class ExitOnPlayHelper
-        {
-            private IKeyboardMouseEvents m_GlobalHook;
-
-            public void Subscribe()
-            {
-                // Note: for the application hook, use the Hook.AppEvents() instead
-                m_GlobalHook = Hook.GlobalEvents();
-
-                //m_GlobalHook.MouseDownExt += GlobalHookMouseDownExt;
-                m_GlobalHook.KeyPress += GlobalHookKeyPress;
-            }
-
-            private void GlobalHookKeyPress(object sender, KeyPressEventArgs e)
-            {
-                switch (e.KeyChar)
-                {
-                    case 'x':
-                        Application.Exit();
-                        break;
-                }
-            }
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -172,8 +146,8 @@ namespace App
                 if (notescount == 0) emptycount++;
                 if (emptycount >= 5)
                 {
-                    Sleep(Math.Max(3000 / (int)(HeaderMIDIStruct.settingTime * speed) - accordLength, 0));
-                    accordLength = Math.Max(0, accordLength - 3000 / (int)(HeaderMIDIStruct.settingTime * speed));
+                    Sleep(Math.Max(3000 / (int)(HeaderMIDIStruct.settingTime * speed / 100) - accordLength, 0));
+                    accordLength = Math.Max(0, accordLength - 3000 / (int)(HeaderMIDIStruct.settingTime * speed / 100));
                     emptycount = 0;
                 }
                 time++;
@@ -411,7 +385,7 @@ namespace App
 
         private void txtBox1_TextChanged(object sender, EventArgs e)
         {
-            float.TryParse(txtBox1.Text, out speed);
+            int.TryParse(txtBox1.Text, out speed);
             tbLog.Text = speed.ToString();
         }
     }
