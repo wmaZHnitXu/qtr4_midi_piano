@@ -89,10 +89,10 @@ namespace App
             MIDIReaderFile.richTextBox1 = tbLog;
             MIDIReaderFile.openMIDIFile(filePath);
             composit = MIDIReaderFile.notes;
-            tbLog.Text = (MIDIReaderFile.HeaderMIDIStruct.lengthSection + " - len.\n ");
-            tbLog.AppendText(MIDIReaderFile.HeaderMIDIStruct.settingTime + " - timeSettings.\n ");
-            tbLog.AppendText(composit.Count + " - notes count.\n ");
-            tbLog.Text += "Done.\n ";
+            tbLog.Text = (MIDIReaderFile.HeaderMIDIStruct.lengthSection + " - len. ");
+            tbLog.AppendText(MIDIReaderFile.HeaderMIDIStruct.settingTime + " - timeSettings. ");
+            tbLog.AppendText(composit.Count + " - notes count. ");
+            tbLog.Text += MIDIReaderFile.pizda ? "Pizda. (proizowla owibka pri s4itivanii) " : "Done. ";
         }
 
         struct Key
@@ -508,7 +508,7 @@ namespace App
         // Назначение: копирование блока MTrk (блок с событиями) из MIDI файла.
         // Параметры: поток для чтения MIDI файла.
         // Возвращает: структуру блока с массивом структур событий.
-        public bool pizda { private set; get; }
+        public static bool pizda { private set; get; }
         public MIDIMTrkStruct CopyMIDIMTrkSection(MIDIReaderFile MIDIFile)
         {
             MIDIMTrkStruct ST = new MIDIMTrkStruct(); // Создаем пустую структуру блока MIDI файла. 
