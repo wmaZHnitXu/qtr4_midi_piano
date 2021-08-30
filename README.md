@@ -11,3 +11,5 @@ po gorizontali mejdy klaviwami, a po vertikali na ygly klaviw ![image](https://u
 
 
 toggle pause/play na bykvy X angluskyjy vsmisle 4to iks
+
+P.S. mojet napisat', 4to pizda pri s4itivanii. Ya dobavil eto t.k. kod s https://github.com/Vadimatorik/midi_to_k1986be92qi ne vsegda pravil'no s4itivaet midik, idk why, tak4to eto typo zaglyshka. Ybrat' zaglyshki - ctrl+f(pizda) => udalit' vse upominania
