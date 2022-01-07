@@ -33,8 +33,8 @@
             this.tmrRelease = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtBox1 = new System.Windows.Forms.TextBox();
             this.Speed = new System.Windows.Forms.Label();
+            this.txtBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tbLog
@@ -72,17 +72,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtBox1
-            // 
-            this.txtBox1.Location = new System.Drawing.Point(308, 183);
-            this.txtBox1.Name = "txtBox1";
-            this.txtBox1.Size = new System.Drawing.Size(100, 20);
-            this.txtBox1.TabIndex = 3;
-            this.txtBox1.Text = "1";
-            this.txtBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtBox1.TextChanged += new System.EventHandler(this.txtBox1_TextChanged);
-            this.txtBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox1_KeyPress);
-            // 
             // Speed
             // 
             this.Speed.AutoSize = true;
@@ -91,6 +80,17 @@
             this.Speed.Size = new System.Drawing.Size(41, 13);
             this.Speed.TabIndex = 4;
             this.Speed.Text = "Speed:";
+            // 
+            // txtBox1
+            // 
+            this.txtBox1.Location = new System.Drawing.Point(308, 183);
+            this.txtBox1.Name = "txtBox1";
+            this.txtBox1.Size = new System.Drawing.Size(100, 20);
+            this.txtBox1.TabIndex = 3;
+            this.txtBox1.Text = "100";
+            this.txtBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBox1.TextChanged += new System.EventHandler(this.txtBox1_TextChanged);
+            this.txtBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox1_KeyPress);
             // 
             // Form1
             // 
@@ -105,8 +105,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tetherscript Virtual Mouse Driver Abs Sender";
+            this.Text = "Piano cheat by Anal Network";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,8 +120,8 @@
         private System.Windows.Forms.Timer tmrRelease;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtBox1;
         private System.Windows.Forms.Label Speed;
+        private System.Windows.Forms.TextBox txtBox1;
     }
 }
 

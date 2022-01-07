@@ -1,0 +1,14 @@
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\obj\Debug\App.Form1.resources
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\obj\Debug\Mouse_Sender_Abs.Properties.Resources.resources
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\obj\Debug\Mouse Sender Abs.csproj.GenerateResource.cache
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\obj\Debug\Mouse Sender Abs.csproj.CoreCompileInputs.cache
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\bin\Debug\Mouse Sender Abs.exe.config
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\bin\Debug\Mouse Sender Abs.exe
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\bin\Debug\Mouse Sender Abs.pdb
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\bin\Debug\WindowsInput.dll
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\bin\Debug\WindowsInput.xml
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\obj\Debug\Mouse Sender Abs.csproj.AssemblyReference.cache
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\obj\Debug\Mouse Sender Abs.csproj.CopyComplete
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\obj\Debug\Mouse Sender Abs.exe
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\obj\Debug\Mouse Sender Abs.pdb
+D:\HID Virtual Device Kit Standard 2.1\SDK\CSharp\Mouse Sender Abs\bin\Debug\Gma.System.MouseKeyHook.dll

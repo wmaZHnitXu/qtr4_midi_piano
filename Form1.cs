@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using HIDCtrl;
 using Drivers;
-using Mouse_Sender_Abs;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Hooks;
@@ -52,8 +51,7 @@ namespace App
         {
             x = 16384;
             y = 16384;
-            keys[0] = new Key(15976, 16237); keys[1] = new Key(16009, 16231); keys[2] = new Key(15979, 16243); keys[3] = new Key(15997, 16246); keys[4] = new Key(16015, 16243); keys[5] = new Key(15994, 16255); keys[6] = new Key(16033, 16246); keys[7] = new Key(16003, 16261); keys[8] = new Key(16021, 16264); keys[9] = new Key(16045, 16258); keys[10] = new Key(16027, 16273); keys[11] = new Key(16057, 16264); keys[12] = new Key(16039, 16279); keys[13] = new Key(16069, 16270); keys[14] = new Key(16054, 16285); keys[15] = new Key(16069, 16291); keys[16] = new Key(16093, 16285); keys[17] = new Key(16081, 16300); keys[18] = new Key(16111, 16288); keys[19] = new Key(16096, 16306); keys[20] = new Key(16114, 16315); keys[21] = new Key(16141, 16303); keys[22] = new Key(16132, 16321); keys[23] = new Key(16162, 16309); keys[24] = new Key(16153, 16327); keys[25] = new Key(16180, 16315); keys[26] = new Key(16174, 16333); keys[27] = new Key(16198, 16339); keys[28] = new Key(16225, 16324); keys[29] = new Key(16222, 16345); keys[30] = new Key(16249, 16330); keys[31] = new Key(16246, 16354); keys[32] = new Key(16273, 16354); keys[33] = new Key(16300, 16336); keys[34] = new Key(16300, 16360); keys[35] = new Key(16324, 16339); keys[36] = new Key(16330, 16366); keys[37] = new Key(16351, 16342); keys[38] = new Key(16360, 16366); keys[39] = new Key(16390, 16366); keys[40] = new Key(16405, 16339); keys[41] = new Key(16420, 16363); keys[42] = new Key(16432, 16339); keys[43] = new Key(16450, 16360); keys[44] = new Key(16480, 16360); keys[45] = new Key(16486, 16333); keys[46] = new Key(16507, 16354); keys[47] = new Key(16507, 16330); keys[48] = new Key(16534, 16351); keys[49] = new Key(16534, 16327); keys[50] = new Key(16555, 16342); keys[51] = new Key(16585, 16342); keys[52] = new Key(16576, 16315); keys[53] = new Key(16603, 16330); keys[54] = new Key(16597, 16312); keys[55] = new Key(16621, 16321); keys[56] = new Key(16645, 16318); keys[57] = new Key(16633, 16300); keys[58] = new Key(16657, 16309); keys[59] = new Key(16651, 16294); keys[60] = new Key(16675, 16303); keys[61] = new Key(16663, 16285); keys[62] = new Key(16696, 16297); keys[63] = new Key(16708, 16288); keys[64] = new Key(16693, 16273); keys[65] = new Key(16720, 16282); keys[66] = new Key(16705, 16267); keys[67] = new Key(16732, 16276); keys[68] = new Key(16738, 16267); keys[69] = new Key(16729, 16255); keys[70] = new Key(16750, 16261); keys[71] = new Key(16738, 16249); keys[72] = new Key(16759, 16255); keys[73] = new Key(16750, 16246); keys[74] = new Key(16765, 16249); keys[75] = new Key(16774, 16243); keys[76] = new Key(16765, 16234); keys[77] = new Key(16792, 16240); keys[78] = new Key(16768, 16228); keys[79] = new Key(16792, 16234); keys[80] = new Key(16807, 16231); keys[81] = new Key(16786, 16219); keys[82] = new Key(16810, 16225); keys[83] = new Key(16792, 16216); keys[84] = new Key(16810, 16219); keys[85] = new Key(16801, 16213); keys[86] = new Key(16819, 16216); keys[87] = new Key(16819, 16210);
-            tbLog.AppendText("\r\n");
+keys[0] = new Key(15973, 16243); keys[1] = new Key(16003, 16237); keys[2] = new Key(15979, 16249); keys[3] = new Key(15994, 16252); keys[4] = new Key(16018, 16246); keys[5] = new Key(16003, 16258); keys[6] = new Key(16027, 16252); keys[7] = new Key(16000, 16267); keys[8] = new Key(16012, 16273); keys[9] = new Key(16045, 16264); keys[10] = new Key(16024, 16279); keys[11] = new Key(16054, 16270); keys[12] = new Key(16036, 16285); keys[13] = new Key(16066, 16276); keys[14] = new Key(16051, 16291); keys[15] = new Key(16066, 16297); keys[16] = new Key(16093, 16288); keys[17] = new Key(16078, 16306); keys[18] = new Key(16111, 16294); keys[19] = new Key(16096, 16312); keys[20] = new Key(16111, 16321); keys[21] = new Key(16144, 16306); keys[22] = new Key(16129, 16327); keys[23] = new Key(16162, 16312); keys[24] = new Key(16147, 16336); keys[25] = new Key(16180, 16318); keys[26] = new Key(16171, 16342); keys[27] = new Key(16195, 16345); keys[28] = new Key(16225, 16327); keys[29] = new Key(16219, 16354); keys[30] = new Key(16249, 16330); keys[31] = new Key(16246, 16357); keys[32] = new Key(16273, 16360); keys[33] = new Key(16297, 16339); keys[34] = new Key(16300, 16363); keys[35] = new Key(16324, 16339); keys[36] = new Key(16330, 16366); keys[37] = new Key(16348, 16339); keys[38] = new Key(16357, 16369); keys[39] = new Key(16390, 16369); keys[40] = new Key(16402, 16339); keys[41] = new Key(16420, 16369); keys[42] = new Key(16426, 16339); keys[43] = new Key(16447, 16366); keys[44] = new Key(16477, 16363); keys[45] = new Key(16477, 16333); keys[46] = new Key(16504, 16357); keys[47] = new Key(16504, 16330); keys[48] = new Key(16528, 16351); keys[49] = new Key(16522, 16324); keys[50] = new Key(16552, 16345); keys[51] = new Key(16576, 16342); keys[52] = new Key(16567, 16315); keys[53] = new Key(16600, 16336); keys[54] = new Key(16585, 16309); keys[55] = new Key(16618, 16327); keys[56] = new Key(16633, 16318); keys[57] = new Key(16618, 16297); keys[58] = new Key(16660, 16315); keys[59] = new Key(16648, 16297); keys[60] = new Key(16678, 16309); keys[61] = new Key(16660, 16288); keys[62] = new Key(16690, 16300); keys[63] = new Key(16708, 16294); keys[64] = new Key(16687, 16276); keys[65] = new Key(16720, 16288); keys[66] = new Key(16705, 16273); keys[67] = new Key(16732, 16282); keys[68] = new Key(16738, 16273); keys[69] = new Key(16726, 16261); keys[70] = new Key(16750, 16267); keys[71] = new Key(16735, 16255); keys[72] = new Key(16759, 16261); keys[73] = new Key(16741, 16249); keys[74] = new Key(16765, 16255); keys[75] = new Key(16780, 16252); keys[76] = new Key(16759, 16240); keys[77] = new Key(16786, 16246); keys[78] = new Key(16765, 16234); keys[79] = new Key(16789, 16240); keys[80] = new Key(16792, 16234); keys[81] = new Key(16774, 16225); keys[82] = new Key(16804, 16231); keys[83] = new Key(16789, 16222); keys[84] = new Key(16804, 16225); keys[85] = new Key(16795, 16219); keys[86] = new Key(16813, 16222); keys[87] = new Key(16807, 16216); tbLog.AppendText("\r\n");
             //create the HIDController 
             HID.OnLog += new EventHandler<LogArgs>(Log);
             HID.VendorID = (ushort)DriversConst.TTC_VENDORID;                //the Tetherscript vendorid
@@ -73,23 +71,30 @@ namespace App
 
         public void button1_Click(object sender, EventArgs e)
         {
+            
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
 
                 openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
                 openFileDialog.RestoreDirectory = true;
+                openFileDialog.Filter = "midi files (*.mid)|*.mid|All files (*.*)|*.*";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     filePath = openFileDialog.FileName;
 
                 }
+                else
+                {
+                    return;
+                }
             }
-            tbLog.Text = "Zagryjayou midi, jdi";
+            //tbLog.Text = "Zagryjayou midi, jdi";
             MIDIReaderFile.richTextBox1 = tbLog;
             MIDIReaderFile.openMIDIFile(filePath);
+            tbLog.Clear();
             composit = MIDIReaderFile.notes;
-            tbLog.Text = (MIDIReaderFile.HeaderMIDIStruct.lengthSection + " - len. ");
+            //tbLog.Text = (MIDIReaderFile.HeaderMIDIStruct.lengthSection + " - len. ");
             tbLog.AppendText(MIDIReaderFile.HeaderMIDIStruct.settingTime + " - timeSettings. ");
             tbLog.AppendText(composit.Count + " - notes count. ");
             tbLog.Text += MIDIReaderFile.pizda ? "Pizda. (proizowla owibka pri s4itivanii) " : "Done. ";
@@ -125,29 +130,43 @@ namespace App
             int time = 0;
             int emptycount = 0;
             int accordLength = 0;
+
+            Note getTimedNote (int timex)
+            {
+                for (int i = 0; i < composit.Count; i++)
+                {
+                    if (composit[i].StartTime == timex)
+                    {
+                        return composit[i];
+                    }
+                }
+                return Note.empty;
+            }
+
             while (composit.Count != 0)
             {
                 int notescount = 0;
-                while (composit.Count != 0 && composit[0].StartTime == time)
+                while (composit.Count != 0 && !getTimedNote(time).Equals(Note.empty))
                 {
-                    if (composit[0].note >= 0 && composit[0].note <= 87)
+                    Note currentnote = getTimedNote(time);
+                    if (currentnote.note >= 0 && currentnote.note <= 87)
                     {
                         notescount++;
                         accordLength += 24;
-                        Key k = keys[composit[0].note];
+                        Key k = keys[currentnote.note];
                         Send_Data_To_MouseAbs(k.x, k.y);
                         Sleep(12);
                         Click();
                         Sleep(12);
                         emptycount = 0;
                     }
-                    composit.RemoveAt(0);
+                    composit.Remove(currentnote);
                 }
                 if (notescount == 0) emptycount++;
                 if (emptycount >= 5)
                 {
-                    Sleep(Math.Max(3000 / (int)(HeaderMIDIStruct.settingTime * speed / 100) - accordLength, 0));
-                    accordLength = Math.Max(0, accordLength - 3000 / (int)(HeaderMIDIStruct.settingTime * speed / 100));
+                    Sleep(Math.Max(4000 / (int)(HeaderMIDIStruct.settingTime * speed / 100) - accordLength, 0));
+                    accordLength = Math.Max(0, accordLength - 4000 / (int)(HeaderMIDIStruct.settingTime * speed / 100));
                     emptycount = 0;
                 }
                 time++;
@@ -233,7 +252,7 @@ namespace App
 
         private void Script()
         {
-            new Script(this);
+            //new Script(this);
             Send_Data_To_MouseAbs();
         }
 
@@ -290,6 +309,7 @@ namespace App
             //m_GlobalHook.MouseDownExt += GlobalHookMouseDownExt;
             m_GlobalHook.KeyPress += GlobalHookKeyPress;
         }
+        
         bool record;
         private void GlobalHookKeyPress(object sender, KeyPressEventArgs e)
         {
@@ -345,6 +365,14 @@ namespace App
                             }
                         }
                         break;
+                    case '.':
+                        speed++;
+                        txtBox1.Text = speed.ToString();
+                        break;
+                    case ',':
+                        speed--;
+                        txtBox1.Text = speed.ToString();
+                        break;
                 }
             }
         }
@@ -358,10 +386,10 @@ namespace App
         public void Unsubscribe()
         {
             //m_GlobalHook.MouseDownExt -= GlobalHookMouseDownExt;
-            m_GlobalHook.KeyPress -= GlobalHookKeyPress;
+            //m_GlobalHook.KeyPress -= GlobalHookKeyPress;
 
             //It is recommened to dispose it
-            m_GlobalHook.Dispose();
+            //m_GlobalHook.Dispose();
         }
 
         int i = 0;
@@ -382,11 +410,15 @@ namespace App
                     e.Handled = true;
             }
         }
-
         private void txtBox1_TextChanged(object sender, EventArgs e)
         {
             int.TryParse(txtBox1.Text, out speed);
             tbLog.Text = speed.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
@@ -473,13 +505,14 @@ namespace App
 
         public static bool openMIDIFile(string pathToFile)
         {
+            pizda = false;
             FileStream fileStream = new FileStream(pathToFile, FileMode.Open, FileAccess.Read);  // Открываем файл только для чтения.
             MIDIReaderFile MIDIFile = new MIDIReaderFile(fileStream);                            // Собственный поток для работы с MIDI файлом со спец. функциями. На основе байтового потока открытого файла.
             HeaderMIDIStruct = MIDIFile.CopyHeaderOfMIDIFile(MIDIFile);                  // Считываем заголовок.
             MIDIMTrkStruct[] MTrkStruct = new MIDIMTrkStruct[HeaderMIDIStruct.channels];         // Определяем массив для MTrkStruct.
-            richTextBox1.Text += "Количество блоков: " + HeaderMIDIStruct.channels.ToString() + "\n"; // Количество каналов.
-            richTextBox1.Text += "Параметры времени: " + HeaderMIDIStruct.settingTime.ToString() + "\n";
-            richTextBox1.Text += "Формат MIDI: " + HeaderMIDIStruct.mode.ToString() + "\n";
+            //richTextBox1.Text += "Количество блоков: " + HeaderMIDIStruct.channels.ToString() + "\n"; // Количество каналов.
+            //richTextBox1.Text += "Параметры времени: " + HeaderMIDIStruct.settingTime.ToString() + "\n";
+            //richTextBox1.Text += "Формат MIDI: " + HeaderMIDIStruct.mode.ToString() + "\n";
             for (int loop = 0; loop < HeaderMIDIStruct.channels; loop++)
                 MTrkStruct[loop] = MIDIFile.CopyMIDIMTrkSection(MIDIFile);                                // Читаем блоки MIDI файла.
             MIDIFile.outData(MIDIFile.СreateNotesArray(MTrkStruct, HeaderMIDIStruct.channels));                    // Получаем список нота/длительность.
@@ -638,6 +671,8 @@ namespace App
             public int StartTime;
             public int note;
 
+            public static Note empty = new Note(0, -1);
+
             public Note(int s, int n)
             {
                 StartTime = s;
@@ -649,9 +684,10 @@ namespace App
         {
 
             int maxTime = 0;
+
             for (int i = 0; i < notesComposition.Count; i++)
             {
-                if (maxTime < notesComposition[i].StartTime) maxTime = notesComposition[i].StartTime;
+                if (maxTime < notesComposition[i].StartTime) maxTime = notesComposition[i].StartTime; /*
                 //richTextBox1.Text += notesComposition[i].note + "_" + notesComposition[i].StartTime + " ";
                 for (int j = i; j < notesComposition.Count-i; j++)
                 {
@@ -662,6 +698,7 @@ namespace App
                         notesComposition[i] = buffer;
                     }
                 }
+                */
             }
             
 
